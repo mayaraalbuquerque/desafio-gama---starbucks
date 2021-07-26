@@ -31,24 +31,27 @@ function toggleMenu(){
         seunome.style.borderColor = "#DCDCDC";
     });
 
-    window.onload = function(){
-        var enviar = document.getElementById("enviar");
-        var seunome = document.getElementById("seunome");
-        var Email  = document.getElementById("Email");
-
-            enviar.onclick = salvarNome, salvarEmail;
-            
-
-}
+    
 
     function salvarNome(){
-        var inputseunome = document.getElementById("nome");
+
+        
+        var inputseunome = document.getElementById("seunome");
         var nome = inputseunome.value; 
+        
+        localStorage.setItem("nomeSalvo", nome);
 
-        localStorage.setItem("nomeSalvo", JSON.stringify(nome))
-
+        //var span = document.getElementById("mensagem");
+        //span.innerHTML = "Nome e email salvos!";
+        
+        var Email = document.getElementById("Email").value;
+        var txtEmail = document.getElementById("Email").value;
+        
+        localStorage.setItem("emailSalvo", txtEmail);
+        
         var span = document.getElementById("mensagem");
-        span.innerHTML = "Nome e email salvos!";
+        //span.innerHTML = "Nome e email salvo!";
+        
     }
 
     function salvarEmail(){

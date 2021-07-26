@@ -1,2 +1,2 @@
-Projeto para o desafio
-Onde só o email é salvo :( mas o site está responsivo (assim espero) e tem JS.
+Projeto para o desafio I e II
+Onde o cadastro de nome e email são salvos no localstorage.

@@ -20,28 +20,55 @@
                     <li><a href="cadastro.html">Cadastre-se</a></li>
                 </ul>
             </header>
-            <div class="content">
-                <div class="textBox">
-                    <h2>Isso não é só um café<br>Isso é <span>Starbucks!</span></h2>
-                    <p>Durante a semana nossas franquias estarão com um super desconto. <br> Cadastre seu email e receba cupons de até 50% para utilizar em nossas franquias! Promoção válida por 7 dias em todas as nossas unidades. </p>
-                <form id="formCad" class="formCad" method="post" onsubmit="salvarNome()" >
-                    <h3>Cadastre-se</h3>
-                    <input id="seunome" type="text" name="name" placeholder="Seu nome"/>
-                    <input id="Email" type="text" name="email" placeholder="Seu e-mail"/>
-                    <input id="enviar" type="submit" name="acao" value="Enviar"  />
-                </form>
-                
-                
-                </div>
-            <div class="imgBox">
-                <img src="imagens/img1.png" class="Starbucks" alt="cafe starbucks">
-            </div>
-        </div>
-        <ul class="thumb">
+      <div class="content_loja">
+        <ul class="thumb_loja">
             <li><img src="imagens/thumb1.png" alt="cafe tamanho pequeno" onclick="imgSlider('imagens/img1.png');changeCircleColor('#017143')"></li>
             <li><img src="imagens/thumb2.png" alt="cafe pequeno" onclick="imgSlider('imagens/img2.png');changeCircleColor('#eb7495')"></li>
             <li><img src="imagens/thumb3.png" alt="cafe pequeno" onclick="imgSlider('imagens/img3.png');changeCircleColor('#d752b1')"></li>
-        </ul>
+        </ul>                
+        
+        <main>
+            <div class="title">
+                 <h2>Produtos</h2>
+                 <span>Lista de produtos</span>
+            </div>
+
+            <div class="card">
+                <div class="lineInput">
+                    <label>Produto</label>
+                    <input type="text" id="produto" placeholder="Nome do produto">
+                </div>
+
+                <div class="lineInput">
+                    <label>Preço</label>
+                    <input type="number" id="preco" placeholder="Valor do produto">
+                </div>
+
+                <button onclick="produto.salvar()" id="btn1"> Salvar </button>
+                <button onclick="produto.cancelar()"> Cancelar </button>
+            </div>
+            
+            <div class="content2">
+                <table border="1">
+                    <thead>
+                        <th class="center">ID</th>
+                        <th>Produto</th>
+                        <th>Valor</th>
+                        <th class="center">Ações</th>
+                    </thead>
+                    <tbody id="tbody">
+                        
+                    </tbody>
+                </table>
+            </div>
+             
+        </main>
+        </div> 
+                
+                        
+            
+
+
         <ul class="sci">
             <li><a href="#"><img src="imagens/facebook.png" alt="icone do facebook"></a></li>
             <li><a href="#"><img src="imagens/instagram.png" alt="icone do instagram"></a></li>
@@ -52,8 +79,8 @@
         <p> &copy; 2021 Projeto desenvolvido para o Gama Experience por Mayara de Albuquerque</p>
     </footer>
     
-    <script src="js/localstorage.js">
+    <script src="js/script.js"> </script>
+    <script src="js/scriptloja.js"> </script>
             
-    </script>
     </body>
 </html>
